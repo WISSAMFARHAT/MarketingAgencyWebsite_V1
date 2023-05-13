@@ -1,0 +1,81 @@
+﻿@import "variable.less";
+
+
+img {
+    pointer-events: none;
+    width: 100%;
+}
+
+body {
+    header {
+        > div {
+            padding-inline: 20px;
+            max-width: var(--maxWidth);
+            margin-inline: auto;
+        }
+    }
+
+    main {
+        margin-top: var(--headerHeight);
+
+        section {
+
+            > article, > div {
+                max-width: var(--maxWidth);
+                width: 100%;
+            }
+        }
+    }
+
+    .--phone {
+        min-width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 5px;
+        background-color: var(--greenColor);
+        color: var(--whiteColor) !important;
+        border-radius: var(--raduis);
+        border: 2px solid transparent;
+        white-space: nowrap;
+        font-weight: 700;
+        cursor: pointer;
+        letter-spacing: -.01em;
+        transition:all var(--duration);
+        &:hover {
+            background-color: transparent;
+            border-color: var(--greenColor);
+        }
+
+        &:after, &:before {
+            content: none;
+            display: none;
+        }
+    }
+
+    h2 {
+        position: relative;
+        font-size: 2.5rem;
+        margin: 0;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+        color: var(--grayColor);
+        font-weight: bold;
+
+        span {
+            color: var(--primaryColor);
+            font-weight: bold;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            height: 5px;
+            background-color: var(--greenColor);
+        }
+    }
+}

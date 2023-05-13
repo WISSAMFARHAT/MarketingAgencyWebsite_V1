@@ -1,0 +1,251 @@
+﻿@{
+    Html.Bundle("https://code.jquery.com/jquery-3.6.0.min.js");
+    Html.Bundle("https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css");
+    Html.Bundle("https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js");
+    Html.Bundle("https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js");
+    Html.Bundle("js/swipe.js");
+    Html.Bundle("css/index.css");
+    Html.Bundle("js/particles.js");
+}
+
+<section class="hero fadein">
+    <div>
+        <div class="swiper-container gallery-top swiper-container-horizontal">
+            <!-- horizontal slides -->
+            <div class="swiper-wrapper">
+                @for (int i = 0; i < 3; i++)
+                {
+                    <div class="swiper-slide bg-image swiper-slide-duplicate" data-swiper-slide-index="0" data-stellar-background-ratio="0.5" style="background-image: url(img/home/startegie.webp);"></div>
+                    <div class="swiper-slide bg-image swiper-slide-duplicate" data-swiper-slide-index="1" data-stellar-background-ratio="0.5" style="background-image: url(img/home/digital.webp);"></div>
+                    <div class="swiper-slide bg-image swiper-slide-duplicate" data-swiper-slide-index="2" data-stellar-background-ratio="0.5" style="background-image: url(img/home/content.webp);"></div>
+
+                }
+            </div>
+        </div>
+        <div class="swiper-container gallery-thumbs swiper-container-vertical">
+            <!-- vertical slides -->
+            <div class="swiper-wrapper ">
+                @for (int i = 0; i < 3; i++)
+                {
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0">
+                        Marketing Strategy
+                        <a href="#">
+                            Explore
+                            <div class="plus">+</div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1">
+                        Digital Marketing
+                        <a href="https://www.boldot.com/services/#digital">
+                            Explore
+                            <div class="plus">+</div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2">
+                        Creative Content
+                        <a href="https://www.boldot.com/services/#content">
+                            Explore
+                            <div class="plus">+</div>
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="hero-scroll fadein">
+            <b>SCROLL DOWN</b>
+            <span></span>
+        </div>
+    </div>
+</section>
+
+<section class="about">
+    <div>
+        <h2 class="fadein">Who <span>We</span> Are</h2>
+        <span class="about-subtitle fadein">
+            We’re a Warrington based digital agency, providing fresh, creative digital services to businesses who want to grow online. Focusing on results, we use our technical skill and industry insight to help you meet your digital goals.<a href="#">Talk to us</a> about your project to get started.
+        </span>
+        <div class="about-work">
+            @for (int i = 0; i < 2; i++)
+            {
+                <a href="#" class="work fade-left" style="background-image:url(img/home/webdesign.webp)">
+                    <span class="work-title">
+                        Web Design
+                    </span>
+                    <span class="work-detail">
+                        High quality and affordable websites designed to convert to sales.
+                    </span>
+                    <partial name="Assets/Services/ViewMore" />
+                </a>
+                <a href="#" class="work fadein" style="background-image:url(img/home/photography.webp)">
+                    <span class="work-title">
+                        Photography & Video
+                    </span>
+                    <span class="work-detail">
+                        Our photography packages can suit all budgets. No matter what you need, we’d love to make your vision a reality.
+                    </span>
+                    <partial name="Assets/Services/ViewMore" />
+                </a>
+                <a href="#" class="work fade-right" style="background-image:url(img/home/tiktok.webp)">
+                    <span class="work-title">
+                        TikTok Content
+                    </span>
+                    <span class="work-detail">
+                        Let us help in setting up your TikTok account and creating engaging content for your business.
+                    </span>
+                    <partial name="Assets/Services/ViewMore" />
+                </a>
+            }
+
+        </div>
+    </div>
+    <div class="branding">
+        <span class="fadein">
+            WHY SO MANY BUSINESSES WORK WITH US
+        </span>
+        <h2 class="fadein">
+            Why <span>Incube</span> Branding?
+        </h2>
+        <div class="branding-information">
+            <div class="information fade-left">
+                <div class="information-image">
+                    <partial name="Assets/Services/Experience" />
+                </div>
+                <span class="information-title">
+                    Experience
+                </span>
+                <span class="information-description">
+                    Our experience allows us to understand your budget and utilise it effectively. We help you figure out what you really need, and deliver it.
+                </span>
+            </div>
+
+            <div class="information fadein">
+                <div class="information-image">
+                    <partial name="Assets/Services/Heart" />
+                </div>
+                <span class="information-title">
+                    Passion
+                </span>
+                <span class="information-description">
+                    We’re a close-knit team of friendly creatives and we’re all passionate about what we do. We thrive on helping our clients, and we’d love to have a chat.
+                </span>
+            </div>
+
+
+            <div class="information fade-right">
+                <div class="information-image">
+                    <partial name="Assets/Services/Arrow" />
+                </div>
+                <span class="information-title">
+                    Access
+                </span>
+                <span class="information-description">
+                    Our team’s excellent combination of digital skill, creativity and innovative tech means we’re perfectly placed to help you reach new audiences.
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services">
+    <div>
+        <h2 class="fadein">Our <span>Services</span></h2>
+        <span class="services-subtitle fadein">
+            High quality services to selective B2B & B2C companies
+        </span>
+        <div class="services-service">
+            <a href="#" class="service fade-left">
+                <div class="service-icon">
+                    <partial name="Assets/Services/Marketing" />
+                </div>
+                <div class="service-information">
+                    <b>
+                        MARKETING STRATEGY
+                    </b>
+                    <span>
+                        Marketing plan
+                    </span>
+                    <span>
+                        Brand strategy
+                    </span>
+                    <span>
+                        Rebranding
+                    </span>
+                    <span>
+                        Commercial & retail marketing
+                    </span>
+                </div>
+                <span>read more</span>
+            </a>
+            <a href="#" class="service fadein">
+                <div class="service-icon">
+                    <partial name="Assets/Services/SocialMeida" />
+                </div>
+                <div class="service-information">
+                    <b>
+                        DIGITAL & SOCIAL MEDIA MARKETING
+                    </b>
+                    <span>
+                        Digital strategy
+                    </span>
+                    <span>
+                        Content marketing
+                    </span>
+                    <span>
+                        Social media management
+                    </span>
+                    <span>
+                        Social media advertising
+                    </span>
+                    <span>
+                        Google ads
+                    </span>
+                    <span>
+                        Email & mobile marketing
+                    </span>
+                    <span>SEO</span>
+                </div>
+                <span>read more</span>
+            </a>
+            <a href="#" class="service fade-right">
+                <div class="service-icon">
+                    <partial name="Assets/Services/CreativeContent" />
+                </div>
+                <div class="service-information">
+                    <b>
+                        CREATIVE CONTENT
+                    </b>
+                    <span>
+                        Social media content
+                    </span>
+                    <span>
+                        Copywriting
+                    </span>
+                    <span>
+                        Video creation
+                    </span>
+                    <span>
+                        Photo shootings
+                    </span>
+                </div>
+                <span>read more</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section class="contact" id="particles">
+    <div>
+        <h2 class="fadein">Contact <span>Us</span></h2>
+        <span class="fadein">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        </span>
+        <a href="#" class="--phone fadein">Let's Talk</a>
+    </div>
+</section>
+
+<div class="mobile">
+   <partial name="Assets/logo" />
+   <span>Comming Soon</span>
+</div>
